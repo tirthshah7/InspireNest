@@ -1,0 +1,58 @@
+{
+  "test_suite": "01_simple",
+  "description": "Simple shapes for baseline testing - rectangles and circles",
+  
+  "test_files": [
+    "rectangles.dxf",
+    "circles.dxf",
+    "mixed_simple.dxf",
+    "Rectangles_circles.dxf"
+  ],
+  
+  "sheet": {
+    "width": 600,
+    "height": 400,
+    "thickness": 3.0,
+    "material": "mild_steel",
+    "description": "Smaller sheet for simple shapes testing"
+  },
+  
+  "constraints": {
+    "kerf_width": 0.3,
+    "min_web": 3.0,
+    "sheet_margin_left": 5.0,
+    "sheet_margin_right": 5.0,
+    "sheet_margin_top": 5.0,
+    "sheet_margin_bottom": 5.0,
+    "description": "Standard constraints - 0.3mm kerf, 3mm min web"
+  },
+  
+  "rotation": {
+    "allowed_angles": [0, 90, 180, 270],
+    "grain_sensitive": false,
+    "description": "All cardinal rotations allowed"
+  },
+  
+  "optimization": {
+    "max_runtime_seconds": 30,
+    "num_multi_starts": 5,
+    "enable_local_search": true,
+    "enable_simulated_annealing": false,
+    "target_utilization": 80.0,
+    "description": "Quick optimization for simple shapes"
+  },
+  
+  "expected_results": {
+    "min_utilization_percent": 75.0,
+    "max_sheets_needed": 1,
+    "max_runtime_seconds": 30,
+    "notes": "Simple rectangular/circular packing should achieve 75%+ utilization"
+  },
+  
+  "benchmark_baseline": {
+    "deepnest_utilization": null,
+    "manual_nesting_utilization": null,
+    "notes": "Baseline to be established"
+  }
+}
+

@@ -1,0 +1,28 @@
+{
+  "sheet": {
+    "width": 600,
+    "height": 600,
+    "material": "mild_steel",
+    "thickness": 3.0,
+    "margin_left": 5.0,
+    "margin_right": 5.0,
+    "margin_top": 5.0,
+    "margin_bottom": 5.0
+  },
+  "constraints": {
+    "kerf_width": 0.1,
+    "min_web": 1.0,
+    "allow_sheet_rotation": false
+  },
+  "rotation": {
+    "allowed_angles": [0, 90, 180, 270],
+    "grain_sensitive": false
+  },
+  "optimization": {
+    "max_runtime_seconds": 300,
+    "num_multi_starts": 10,
+    "enable_local_search": true,
+    "target_utilization": 80.0
+  }
+}
+

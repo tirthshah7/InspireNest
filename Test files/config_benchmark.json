@@ -1,0 +1,178 @@
+{
+  "benchmark_suite": {
+    "name": "Laser Cutting Nesting Benchmark v1.0",
+    "description": "Comprehensive benchmark suite for evaluating nesting algorithms",
+    "version": "1.0.0",
+    "date_created": "2025-10-17",
+    "author": "TheInspiredManufacturing"
+  },
+  
+  "test_scenarios": [
+    {
+      "scenario_id": "simple_fast",
+      "name": "Simple Shapes - Fast Test",
+      "category": "01_simple",
+      "files": ["rectangles.dxf", "circles.dxf"],
+      "sheet": "small_test",
+      "material": "mild_steel_3mm",
+      "rotation": "cardinal_only",
+      "max_runtime": 30,
+      "num_seeds": 3,
+      "description": "Quick sanity check with basic shapes"
+    },
+    
+    {
+      "scenario_id": "simple_full",
+      "name": "Simple Shapes - Full Suite",
+      "category": "01_simple",
+      "files": "all",
+      "sheet": "standard_4x8",
+      "material": "mild_steel_3mm",
+      "rotation": "cardinal_only",
+      "max_runtime": 60,
+      "num_seeds": 5,
+      "description": "All simple shapes for baseline performance"
+    },
+    
+    {
+      "scenario_id": "moderate_standard",
+      "name": "Moderate Complexity - Standard",
+      "category": "02_moderate",
+      "files": "all",
+      "sheet": "standard_4x8",
+      "material": "mild_steel_3mm",
+      "rotation": "cardinal_only",
+      "max_runtime": 90,
+      "num_seeds": 5,
+      "description": "Brackets, gears, plates with standard settings"
+    },
+    
+    {
+      "scenario_id": "moderate_optimized",
+      "name": "Moderate Complexity - Optimized",
+      "category": "02_moderate",
+      "files": "all",
+      "sheet": "standard_4x8",
+      "material": "mild_steel_3mm",
+      "rotation": "eight_way",
+      "max_runtime": 180,
+      "num_seeds": 10,
+      "enable_sa": true,
+      "description": "More rotations and SA for better results"
+    },
+    
+    {
+      "scenario_id": "complex_standard",
+      "name": "Complex Shapes - Standard",
+      "category": "03_complex",
+      "files": "all",
+      "sheet": "standard_4x8",
+      "material": "stainless_steel_3mm",
+      "rotation": "cardinal_only",
+      "max_runtime": 120,
+      "num_seeds": 5,
+      "description": "Irregular shapes with 4 rotations"
+    },
+    
+    {
+      "scenario_id": "complex_aggressive",
+      "name": "Complex Shapes - Aggressive Optimization",
+      "category": "03_complex",
+      "files": "all",
+      "sheet": "standard_4x8",
+      "material": "stainless_steel_3mm",
+      "rotation": "eight_way",
+      "max_runtime": 300,
+      "num_seeds": 15,
+      "enable_sa": true,
+      "enable_lift_drop": true,
+      "description": "Maximum optimization for best possible results"
+    },
+    
+    {
+      "scenario_id": "mixed_production",
+      "name": "Mixed Parts - Production Scenario",
+      "category": "mixed",
+      "files": [
+        "01_simple/rectangles.dxf",
+        "02_moderate/brackets_L_T_sha[e.dxf",
+        "03_complex/irregular_shapes.dxf"
+      ],
+      "sheet": "standard_4x8",
+      "material": "mild_steel_3mm",
+      "rotation": "cardinal_only",
+      "max_runtime": 120,
+      "num_seeds": 5,
+      "description": "Realistic mix of part complexities"
+    }
+  ],
+  
+  "metrics_to_collect": [
+    "utilization_percent",
+    "sheets_used",
+    "total_cut_length_mm",
+    "total_pierce_count",
+    "estimated_cut_time_seconds",
+    "estimated_rapid_time_seconds",
+    "total_machine_time_seconds",
+    "runtime_seconds",
+    "parts_placed",
+    "parts_failed",
+    "material_cost",
+    "time_cost"
+  ],
+  
+  "comparison_baselines": {
+    "deepnest": {
+      "available": false,
+      "notes": "To be run separately if available"
+    },
+    "truenest": {
+      "available": false,
+      "notes": "Commercial baseline (if accessible)"
+    },
+    "manual_nesting": {
+      "available": false,
+      "notes": "Human operator baseline for reference"
+    }
+  },
+  
+  "success_criteria": {
+    "01_simple": {
+      "min_utilization": 75.0,
+      "max_runtime": 60,
+      "reliability": "100% placement success"
+    },
+    "02_moderate": {
+      "min_utilization": 78.0,
+      "max_runtime": 120,
+      "reliability": "98% placement success"
+    },
+    "03_complex": {
+      "min_utilization": 75.0,
+      "max_runtime": 180,
+      "reliability": "95% placement success"
+    }
+  },
+  
+  "reporting": {
+    "output_format": ["json", "csv", "markdown", "html"],
+    "generate_plots": true,
+    "plot_types": [
+      "utilization_by_scenario",
+      "runtime_by_complexity",
+      "convergence_curves",
+      "comparison_bar_charts"
+    ],
+    "include_visual_output": true,
+    "save_intermediate_solutions": true
+  },
+  
+  "reproducibility": {
+    "random_seeds": [42, 123, 456, 789, 1000],
+    "save_rng_state": true,
+    "log_all_parameters": true,
+    "version_control": "git_commit_hash"
+  }
+}
+

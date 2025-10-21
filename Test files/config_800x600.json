@@ -1,0 +1,23 @@
+{
+  "sheet": {
+    "width": 800,
+    "height": 600,
+    "margin_left": 5,
+    "margin_right": 5,
+    "margin_top": 5,
+    "margin_bottom": 5,
+    "material": "Mild Steel 6mm"
+  },
+  "constraints": {
+    "min_web": 0.5
+  },
+  "rotation": {
+    "allowed_angles": [0, 90, 180, 270]
+  },
+  "optimization": {
+    "max_runtime_seconds": 120,
+    "num_multi_starts": 5,
+    "enable_local_search": true
+  }
+}
+

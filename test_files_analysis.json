@@ -1,0 +1,195 @@
+{
+  "01_simple": [
+    {
+      "filename": "Rectangles_circles.dxf",
+      "path": "Test files/01_simple/Rectangles_circles.dxf",
+      "file_size_kb": 4.2509765625,
+      "entities": {
+        "LWPOLYLINE": 1
+      },
+      "total_entities": 1,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 50.0,
+        "min_y": 0.0,
+        "max_y": 330.0,
+        "width": 50.0,
+        "height": 330.0
+      },
+      "estimated_parts": 1,
+      "complexity_score": 1.0
+    },
+    {
+      "filename": "rectangles.dxf",
+      "path": "Test files/01_simple/rectangles.dxf",
+      "file_size_kb": 8.0888671875,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "LINE": 24
+      },
+      "total_entities": 25,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 120.64,
+        "min_y": 0.0,
+        "max_y": 330.0,
+        "width": 120.64,
+        "height": 330.0
+      },
+      "estimated_parts": 1,
+      "complexity_score": 1.0
+    },
+    {
+      "filename": "circles.dxf",
+      "path": "Test files/01_simple/circles.dxf",
+      "file_size_kb": 5.0458984375,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "CIRCLE": 6
+      },
+      "total_entities": 7,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 147.54,
+        "min_y": 0.0,
+        "max_y": 330.0,
+        "width": 147.54,
+        "height": 330.0
+      },
+      "estimated_parts": 7,
+      "complexity_score": 2.0
+    },
+    {
+      "filename": "mixed_simple.dxf",
+      "path": "Test files/01_simple/mixed_simple.dxf",
+      "file_size_kb": 6.6611328125,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "CIRCLE": 1,
+        "LINE": 12,
+        "ARC": 2
+      },
+      "total_entities": 16,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 127.52,
+        "min_y": 0.0,
+        "max_y": 330.0,
+        "width": 127.52,
+        "height": 330.0
+      },
+      "estimated_parts": 2,
+      "complexity_score": 2.2
+    }
+  ],
+  "02_moderate": [
+    {
+      "filename": "plates_with_holes.dxf",
+      "path": "Test files/02_moderate/plates_with_holes.dxf",
+      "file_size_kb": 9.0341796875,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "LINE": 16,
+        "CIRCLE": 11,
+        "ARC": 4
+      },
+      "total_entities": 32,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 160.07,
+        "min_y": -0.57,
+        "max_y": 330.0,
+        "width": 160.07,
+        "height": 330.57
+      },
+      "estimated_parts": 12,
+      "complexity_score": 4.0
+    },
+    {
+      "filename": "brackets_L_T_sha[e.dxf",
+      "path": "Test files/02_moderate/brackets_L_T_sha[e.dxf",
+      "file_size_kb": 8.6943359375,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "LINE": 28
+      },
+      "total_entities": 29,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 50.0,
+        "min_y": 0.0,
+        "max_y": 330.0,
+        "width": 50.0,
+        "height": 330.0
+      },
+      "estimated_parts": 1,
+      "complexity_score": 1.0
+    },
+    {
+      "filename": "gears.dxf",
+      "path": "Test files/02_moderate/gears.dxf",
+      "file_size_kb": 113.658203125,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "LINE": 12,
+        "SPLINE": 228,
+        "CIRCLE": 1
+      },
+      "total_entities": 242,
+      "bounds": {
+        "min_x": -8.38,
+        "max_x": 74.0,
+        "min_y": -8.48,
+        "max_y": 330.0,
+        "width": 82.38,
+        "height": 338.48
+      },
+      "estimated_parts": 2,
+      "complexity_score": 3.2
+    }
+  ],
+  "03_complex": [
+    {
+      "filename": "irregular_shapes.dxf",
+      "path": "Test files/03_complex/irregular_shapes.dxf",
+      "file_size_kb": 9.5693359375,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "LINE": 31,
+        "ARC": 2
+      },
+      "total_entities": 34,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 129.92,
+        "min_y": 0.0,
+        "max_y": 330.0,
+        "width": 129.92,
+        "height": 330.0
+      },
+      "estimated_parts": 1,
+      "complexity_score": 2.0
+    },
+    {
+      "filename": "nested_contours.dxf",
+      "path": "Test files/03_complex/nested_contours.dxf",
+      "file_size_kb": 10.9228515625,
+      "entities": {
+        "LWPOLYLINE": 1,
+        "CIRCLE": 4,
+        "LINE": 38
+      },
+      "total_entities": 43,
+      "bounds": {
+        "min_x": 0.0,
+        "max_x": 155.47,
+        "min_y": 0.0,
+        "max_y": 330.0,
+        "width": 155.47,
+        "height": 330.0
+      },
+      "estimated_parts": 5,
+      "complexity_score": 1.8
+    }
+  ]
+}

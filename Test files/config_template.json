@@ -1,0 +1,60 @@
+{
+  "_description": "Master configuration template for nesting tests",
+  "_version": "1.0.0",
+  "_generated": "2025-10-17",
+  
+  "sheet": {
+    "width": 1220,
+    "height": 2440,
+    "thickness": 3.0,
+    "material": "mild_steel",
+    "cost_per_sheet": 75.00,
+    "description": "Standard 4x8 ft sheet (1220mm × 2440mm)"
+  },
+  
+  "constraints": {
+    "kerf_width": 0.3,
+    "min_web": 3.0,
+    "sheet_margin_left": 5.0,
+    "sheet_margin_right": 5.0,
+    "sheet_margin_top": 5.0,
+    "sheet_margin_bottom": 5.0,
+    "min_part_dimension": 5.0,
+    "max_part_dimension": 1200.0,
+    "description": "Standard laser cutting constraints for 3mm steel"
+  },
+  
+  "rotation": {
+    "allowed_angles": [0, 90, 180, 270],
+    "grain_sensitive": false,
+    "per_part_override": {},
+    "description": "Cardinal directions only (0°, 90°, 180°, 270°)"
+  },
+  
+  "optimization": {
+    "max_runtime_seconds": 60,
+    "num_multi_starts": 10,
+    "enable_local_search": true,
+    "enable_simulated_annealing": false,
+    "target_utilization": 85.0,
+    "description": "Optimization parameters for nesting algorithm"
+  },
+  
+  "manufacturing": {
+    "cutting_speed_mm_min": 3000,
+    "rapid_speed_mm_min": 15000,
+    "pierce_time_seconds": 0.5,
+    "min_lead_in_length": 2.0,
+    "enable_common_line_cutting": false,
+    "description": "Manufacturing and path planning parameters"
+  },
+  
+  "output": {
+    "formats": ["dxf", "svg", "json", "gcode"],
+    "include_labels": true,
+    "show_sheet_bounds": true,
+    "show_part_ids": true,
+    "export_report": true
+  }
+}
+

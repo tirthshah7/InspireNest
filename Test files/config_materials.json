@@ -1,0 +1,108 @@
+{
+  "materials": {
+    "mild_steel_3mm": {
+      "thickness": 3.0,
+      "kerf_width": 0.3,
+      "min_web": 3.0,
+      "cutting_speed": 3000,
+      "pierce_time": 0.5,
+      "cost_per_sqm": 25.0,
+      "description": "Standard mild steel 3mm"
+    },
+    
+    "stainless_steel_3mm": {
+      "thickness": 3.0,
+      "kerf_width": 0.35,
+      "min_web": 4.0,
+      "cutting_speed": 2500,
+      "pierce_time": 0.7,
+      "cost_per_sqm": 45.0,
+      "description": "Stainless steel 3mm (slower cutting)"
+    },
+    
+    "aluminum_3mm": {
+      "thickness": 3.0,
+      "kerf_width": 0.25,
+      "min_web": 2.5,
+      "cutting_speed": 3500,
+      "pierce_time": 0.4,
+      "cost_per_sqm": 35.0,
+      "description": "Aluminum 3mm (faster cutting, tighter tolerances)"
+    },
+    
+    "mild_steel_5mm": {
+      "thickness": 5.0,
+      "kerf_width": 0.4,
+      "min_web": 5.0,
+      "cutting_speed": 2000,
+      "pierce_time": 0.8,
+      "cost_per_sqm": 40.0,
+      "description": "Thicker mild steel 5mm"
+    },
+    
+    "acrylic_3mm": {
+      "thickness": 3.0,
+      "kerf_width": 0.15,
+      "min_web": 2.0,
+      "cutting_speed": 4000,
+      "pierce_time": 0.2,
+      "cost_per_sqm": 15.0,
+      "description": "Acrylic 3mm (very fast, tight tolerances)"
+    }
+  },
+  
+  "sheet_sizes": {
+    "standard_4x8": {
+      "width": 1220,
+      "height": 2440,
+      "description": "4' × 8' (1220mm × 2440mm) - Most common"
+    },
+    
+    "standard_5x10": {
+      "width": 1524,
+      "height": 3048,
+      "description": "5' × 10' (1524mm × 3048mm) - Large format"
+    },
+    
+    "metric_1000x2000": {
+      "width": 1000,
+      "height": 2000,
+      "description": "1m × 2m - Common metric size"
+    },
+    
+    "metric_1500x3000": {
+      "width": 1500,
+      "height": 3000,
+      "description": "1.5m × 3m - Large metric"
+    },
+    
+    "small_test": {
+      "width": 600,
+      "height": 400,
+      "description": "Small test sheet for development"
+    }
+  },
+  
+  "rotation_presets": {
+    "no_rotation": {
+      "angles": [0],
+      "description": "No rotation - grain sensitive materials"
+    },
+    
+    "cardinal_only": {
+      "angles": [0, 90, 180, 270],
+      "description": "4 cardinal directions"
+    },
+    
+    "eight_way": {
+      "angles": [0, 45, 90, 135, 180, 225, 270, 315],
+      "description": "8 directions (45° steps)"
+    },
+    
+    "fine_grain": {
+      "angles": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350],
+      "description": "36 directions (10° steps) - very slow but optimal"
+    }
+  }
+}
+

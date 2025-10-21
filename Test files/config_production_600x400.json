@@ -1,0 +1,24 @@
+{
+  "sheet": {
+    "width": 600,
+    "height": 400,
+    "material": "mild_steel",
+    "thickness": 3.0,
+    "margin_left": 5,
+    "margin_right": 5,
+    "margin_top": 5,
+    "margin_bottom": 5
+  },
+  "constraints": {
+    "kerf_width": 0.1,
+    "min_web": 0.5
+  },
+  "rotation": {
+    "allowed_angles": [
+      0,
+      90,
+      180,
+      270
+    ]
+  }
+}

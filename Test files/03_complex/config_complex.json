@@ -1,0 +1,87 @@
+{
+  "test_suite": "03_complex",
+  "description": "Complex irregular shapes with nested contours",
+  
+  "test_files": [
+    "irregular_shapes.dxf",
+    "nested_contours.dxf"
+  ],
+  
+  "sheet": {
+    "width": 1220,
+    "height": 2440,
+    "thickness": 5.0,
+    "material": "stainless_steel",
+    "description": "Standard sheet for complex parts (thicker material)"
+  },
+  
+  "constraints": {
+    "kerf_width": 0.4,
+    "min_web": 5.0,
+    "sheet_margin_left": 10.0,
+    "sheet_margin_right": 10.0,
+    "sheet_margin_top": 10.0,
+    "sheet_margin_bottom": 10.0,
+    "description": "Tighter constraints for thicker material - 0.4mm kerf, 5mm min web"
+  },
+  
+  "rotation": {
+    "allowed_angles": [0, 45, 90, 135, 180, 225, 270, 315],
+    "grain_sensitive": false,
+    "description": "8 rotations (45° increments) for better nesting of irregular shapes"
+  },
+  
+  "optimization": {
+    "max_runtime_seconds": 120,
+    "num_multi_starts": 15,
+    "enable_local_search": true,
+    "enable_simulated_annealing": true,
+    "sa_initial_temp": 150.0,
+    "sa_cooling_rate": 0.92,
+    "sa_iterations": 1500,
+    "enable_lift_and_drop": true,
+    "lift_and_drop_k": 3,
+    "target_utilization": 85.0,
+    "description": "Aggressive optimization for complex irregular shapes"
+  },
+  
+  "manufacturing": {
+    "cutting_speed_mm_min": 2500,
+    "rapid_speed_mm_min": 15000,
+    "pierce_time_seconds": 0.8,
+    "min_lead_in_length": 3.0,
+    "enable_common_line_cutting": false,
+    "avoid_sharp_corners": true,
+    "corner_slowdown_angle": 30,
+    "description": "Slower cutting for thicker material, avoid sharp corners"
+  },
+  
+  "advanced_features": {
+    "detect_nested_contours": true,
+    "inner_features_first": true,
+    "minimize_thermal_distortion": true,
+    "adaptive_lead_ins": true,
+    "description": "Enable all advanced features for complex parts"
+  },
+  
+  "expected_results": {
+    "min_utilization_percent": 75.0,
+    "max_sheets_needed": 1,
+    "max_runtime_seconds": 120,
+    "notes": "Irregular shapes harder to pack - expect 75-80% utilization with 8 rotations"
+  },
+  
+  "special_notes": {
+    "irregular_shapes": "Test NFP computation and rotation optimization",
+    "nested_contours": "Test hole detection (4 circles) and inner-before-outer sequencing",
+    "challenge": "These represent worst-case scenarios for nesting algorithms"
+  },
+  
+  "benchmark_targets": {
+    "deepnest_utilization_target": 78.0,
+    "commercial_utilization_target": 82.0,
+    "our_goal": 80.0,
+    "notes": "Complex irregular shapes: commercial tools typically achieve 78-82%"
+  }
+}
+

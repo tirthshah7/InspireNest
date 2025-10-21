@@ -1,0 +1,72 @@
+{
+  "test_suite": "02_moderate",
+  "description": "Moderate complexity - brackets, gears, plates with holes",
+  
+  "test_files": [
+    "brackets_L_T_sha[e.dxf",
+    "gears.dxf",
+    "plates_with_holes.dxf"
+  ],
+  
+  "sheet": {
+    "width": 1220,
+    "height": 2440,
+    "thickness": 3.0,
+    "material": "mild_steel",
+    "description": "Standard 4x8 ft sheet for moderate complexity parts"
+  },
+  
+  "constraints": {
+    "kerf_width": 0.3,
+    "min_web": 3.0,
+    "sheet_margin_left": 10.0,
+    "sheet_margin_right": 10.0,
+    "sheet_margin_top": 10.0,
+    "sheet_margin_bottom": 10.0,
+    "description": "Standard constraints with larger margins for safety"
+  },
+  
+  "rotation": {
+    "allowed_angles": [0, 90, 180, 270],
+    "grain_sensitive": false,
+    "per_part_override": {
+      "gears.dxf": [0],
+      "description": "Gears: no rotation to maintain orientation"
+    },
+    "description": "Most parts rotatable, gears fixed"
+  },
+  
+  "optimization": {
+    "max_runtime_seconds": 60,
+    "num_multi_starts": 10,
+    "enable_local_search": true,
+    "enable_simulated_annealing": true,
+    "sa_initial_temp": 100.0,
+    "sa_cooling_rate": 0.95,
+    "target_utilization": 82.0,
+    "description": "Full optimization with SA for better results"
+  },
+  
+  "manufacturing": {
+    "cutting_speed_mm_min": 3000,
+    "rapid_speed_mm_min": 15000,
+    "pierce_time_seconds": 0.5,
+    "min_lead_in_length": 2.5,
+    "enable_common_line_cutting": true,
+    "description": "Enable common line cutting for brackets"
+  },
+  
+  "expected_results": {
+    "min_utilization_percent": 78.0,
+    "max_sheets_needed": 1,
+    "max_runtime_seconds": 60,
+    "notes": "Moderate shapes with holes - expect 78-82% utilization"
+  },
+  
+  "special_notes": {
+    "gears": "Contains SPLINE entities (228 total) - test curve handling",
+    "plates_with_holes": "Test hole detection and inner feature sequencing",
+    "brackets": "Good candidates for common line cutting optimization"
+  }
+}
+
