@@ -118,6 +118,15 @@ async def root():
         "docs": "/docs"
     }
 
+@app.get("/api/health")
+async def health_check():
+    """Health check endpoint for deployment platforms"""
+    return {
+        "status": "healthy",
+        "service": "inspirenest-backend",
+        "version": "1.0.0"
+    }
+
 
 @app.post("/api/upload", response_model=dict)
 async def upload_file(file: UploadFile = File(...)):
